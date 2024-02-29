@@ -4,7 +4,10 @@ function totalizador(precio,cantidad, eCodigo){
         let tax = 0.0875  * precioNeto;
         return tax + precioNeto;
     } 
-    return precio * cantidad;
+    else{
+        return precio * cantidad;
+    }
+    
 }
 
 export default totalizador;
