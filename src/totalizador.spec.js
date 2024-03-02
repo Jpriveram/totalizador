@@ -6,6 +6,13 @@ describe("Totalizador", () => {
   });
 
   it("Deberia mostrar el precio neto con el impuesto aplicado a CA", () =>{
-    expect(totalizador(1,2, "CA")).toEqual(2.175);
+    expect(totalizador(1,2, "CA")).toEqual(2.165);
+  });
+  it("Deberia mostrar el precio neto con el impuesto aplicado a otro Codigo de Estado", () =>{
+    expect(totalizador(1,2, "TX")).toEqual(2.125);
+    expect(totalizador(1,2, "AL")).toEqual(2.08);
+    expect(totalizador(1,2, "UT")).toEqual(2.133);
+    expect(totalizador(1,2, "NV")).toEqual(2.16);
+
   });
 });
