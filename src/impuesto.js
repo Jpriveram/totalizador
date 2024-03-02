@@ -1,43 +1,43 @@
-import impuesto from "./impuesto.js";
-
-function totalizador(precio,cantidad, eCodigo){
-    if(eCodigo === "CA"){
+function impuesto(precio,cantidad,codigo) {
+    
+    if(codigo === "CA"){
         let precioNeto = precio * cantidad;
-        return impuesto(precio,cantidad,eCodigo) + precioNeto;
+        let tax = 0.0825  * precioNeto;
+        return tax ;
     } 
     else
     {
-        if(eCodigo === "NV"){
+        if(codigo === "NV"){
             let precioNeto = precio * cantidad;
             let tax = 0.08  * precioNeto;
-            return impuesto(precio,cantidad,eCodigo) + precioNeto;
+            return tax;
         } 
         else
         {
-            if(eCodigo === "UT"){
+            if(codigo === "UT"){
                 let precioNeto = precio * cantidad;
                 let tax = 0.0665  * precioNeto;
-                return impuesto(precio,cantidad,eCodigo) + precioNeto;
+                return tax ;
             } 
             else
             {
-                if(eCodigo === "TX"){
+                if(codigo === "TX"){
                     let precioNeto = precio * cantidad;
                     let tax = 0.0625  * precioNeto;
-                    return impuesto(precio,cantidad,eCodigo) + precioNeto;
+                    return tax ;
                 } 
                 else{
-                    if(eCodigo === "AL"){
+                    if(codigo === "AL"){
                         let precioNeto = precio * cantidad;
                         let tax = 0.04  * precioNeto;
-                        return impuesto(precio,cantidad,eCodigo) + precioNeto;
+                        return tax ;
                     } 
-                                  
+                                
                 }            
             }       
         } 
     }
     
-}
 
-export default totalizador;
+}
+export default impuesto;
