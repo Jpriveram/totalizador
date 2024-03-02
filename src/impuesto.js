@@ -1,5 +1,4 @@
 function impuesto(precio,cantidad,codigo) {
-    
     if(codigo === "CA"){
         let precioNeto = precio * cantidad;
         let tax = 0.0825  * precioNeto;
