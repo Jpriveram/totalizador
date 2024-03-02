@@ -19,8 +19,11 @@ form.addEventListener("submit", (event) => {
   const cNumber = Number.parseInt(amount.value);
   const selectedValue = sel.value;
 
-  div.innerHTML = "<p>" + "Precio producto: "+ pNumber + "<br>" +
+  div.innerHTML = "<p>" + 
+  "Precio producto: "+ pNumber + "<br>" +
   "Cantidad producto: "+ cNumber + "<br>" +
-  "Impuesto para "+selectedValue+codimpuesto(selectedValue)+impuesto(pNumber,cNumber,selectedValue)+"<br>"+
-  "Precio neto: " + totalizador(pNumber,cNumber,selectedValue) +"</p>";
+  "Impuesto para " + selectedValue+ codimpuesto(selectedValue) + impuesto(pNumber,cNumber,selectedValue) + "<br>" +
+  "Precio neto: " + totalizador(pNumber,cNumber,selectedValue) + "<br>" +
+  "Descuento por orden de " + cNumber + " unidades: " +
+  "</p>";
 });

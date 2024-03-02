@@ -13,6 +13,5 @@ describe("Totalizador", () => {
     expect(totalizador(1,2, "AL")).toEqual(2.08);
     expect(totalizador(1,2, "UT")).toEqual(2.133);
     expect(totalizador(1,2, "NV")).toEqual(2.16);
-
   });
 });
