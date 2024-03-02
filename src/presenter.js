@@ -2,6 +2,7 @@ import totalizador from "./totalizador.js";
 import codimpuesto from "./codImpuesto.js";
 import impuesto from "./impuesto.js";
 
+
 const price = document.querySelector("#precio");
 const amount = document.querySelector("#cantidad");
 const code = document.querySelector("#codigo");
@@ -23,7 +24,6 @@ form.addEventListener("submit", (event) => {
   "Precio producto: "+ pNumber + "<br>" +
   "Cantidad producto: "+ cNumber + "<br>" +
   "Impuesto para " + selectedValue+ codimpuesto(selectedValue) + impuesto(pNumber,cNumber,selectedValue) + "<br>" +
-  "Precio neto: " + totalizador(pNumber,cNumber,selectedValue) + "<br>" +
-  "Descuento por orden de " + cNumber + " unidades: " +
+  "Precio neto: " + totalizador(pNumber,cNumber,selectedValue) + 
   "</p>";
 });
