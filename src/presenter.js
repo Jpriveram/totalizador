@@ -6,6 +6,7 @@ import imprimirDescuentoOrden from "./imprimirDescuentoOrden.js";
 import descuentoAdicionalCat from "./descuentoAdicionalCat.js";
 import imprimirDescAdicCat from "./imprimirDescAdicCat.js";
 import descuento from "./descuento.js";
+import envio from "./peso.js";
 
 
 const price = document.querySelector("#precio");
