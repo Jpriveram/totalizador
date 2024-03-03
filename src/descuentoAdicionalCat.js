@@ -5,6 +5,9 @@ function descuentoAdicionalCat(categoria, precioNeto){
     else if(categoria === "Bebidas alcholicas"){
         return 0;
     }
+    else if(categoria === "Material de escritorio"){
+        return precioNeto * 0.015;
+    }
     else if(categoria === "Varios"){
         return 0;
     }
