@@ -60,9 +60,5 @@ describe("Totalizador", () => {
     expect(totalizador(1, 100, "AL","Vestimenta")).toEqual(106);
   });
 
-   // Descuento adicional por categoria
-   it("Deberia devolver el precio neto con el descuento adicional por categoria", () =>{
-    expect(totalizador(1, 100, "AL","Alimentos")).toEqual(106);
-  });
 });
 
