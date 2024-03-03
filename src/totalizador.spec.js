@@ -14,4 +14,9 @@ describe("Totalizador", () => {
     expect(totalizador(1,2, "UT")).toEqual(2.133);
     expect(totalizador(1,2, "NV")).toEqual(2.16);
   });
+
+  // Deberia mostrar un descuento del 3% para una cantidad de 1000, un precio X y tambien un estado X
+  it("Deberia mostrar el monto total con el descuento del 3% para una cantidad de 1000", () =>{
+    expect(totalizador(1, 1000, "CA")).toEqual(1052.5);
+  });
 });

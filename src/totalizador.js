@@ -1,8 +1,11 @@
 import impuesto from "./impuesto.js";
+import descuentoPorOrden from "./descuentoPorOrden.js";
 
-function totalizador(precio,cantidad, eCodigo){
+function totalizador(precio, cantidad, eCodigo){
     let precioNeto = precio * cantidad;
-    return impuesto(precio,cantidad,eCodigo) + precioNeto;    
+    let imp = impuesto( precio, cantidad, eCodigo);
+    let descuentoOrden = descuentoPorOrden(cantidad);
+    return imp + precioNeto - descuentoOrden;    
 }
 
 export default totalizador;
