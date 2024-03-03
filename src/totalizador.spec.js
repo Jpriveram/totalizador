@@ -69,8 +69,12 @@ describe("Totalizador", () => {
     expect(totalizador(2, 1000, "UT","Bebidas alcholicas")).toEqual(2213);
   });
 
-  it("Deberia devolver el precio neto con el descuento adicional por categoria Material De Escritorio", () =>{
+  it("Deberia devolver el precio neto con el descuento adicional por categoria Material De Escritorio (1.5%)", () =>{
     expect(totalizador(3, 3000, "TX","Material de escritorio")).toEqual(8977.5);
+  });
+
+  it("Deberia devolver el precio neto con el descuento adicional por categoria Muebles (0%)", () =>{
+    expect(totalizador(70, 20, "CA","Muebles")).toEqual(1557.5);
   });
 });
 

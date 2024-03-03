@@ -8,6 +8,9 @@ function imprimirDescAdicCat(categoria){
     else if(categoria === "Material de escritorio"){
         return "1.5%";
     }
+    else if(categoria === "Muebles"){
+        return "0%";
+    }
     else{
         return "0%";
     }
