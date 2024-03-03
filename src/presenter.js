@@ -5,6 +5,7 @@ import catimpuesto from "./catImpuesto.js";
 import imprimirDescuentoOrden from "./imprimirDescuentoOrden.js";
 import descuentoAdicionalCat from "./descuentoAdicionalCat.js";
 import imprimirDescAdicCat from "./imprimirDescAdicCat.js";
+import descuento from "./descuento.js";
 
 
 const price = document.querySelector("#precio");
@@ -32,7 +33,7 @@ form.addEventListener("submit", (event) => {
   "Cantidad producto: "+ cNumber + "<br>" +
   "Impuesto para el estado " + selectedValue + "(" + codimpuesto(selectedValue) + "%)  + impuesto para " + ValueCat + "(" + catimpuesto(ValueCat) + "%): "+ impuesto(pNumber,cNumber,selectedValue,ValueCat) + "<br>" +
   "Descuento por cantidad de " + cNumber + " unidades es de: " + imprimirDescuentoOrden(cNumber) + " del precio total " + 
-  "+ descuento adicional por categoria " + ValueCat + "(" + imprimirDescAdicCat(ValueCat) + "):" + "<br>" + 
+  "+ descuento adicional por categoria " + ValueCat + "(" + imprimirDescAdicCat(ValueCat) + "):" + descuento(pNumber, cNumber, ValueCat) + "<br>" + 
   "Precio neto: " + totalizador(pNumber,cNumber,selectedValue,ValueCat) + 
   "</p>";
 });
