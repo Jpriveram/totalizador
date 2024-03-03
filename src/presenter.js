@@ -3,6 +3,8 @@ import codimpuesto from "./codImpuesto.js";
 import impuesto from "./impuesto.js";
 import catimpuesto from "./catImpuesto.js";
 import imprimirDescuentoOrden from "./imprimirDescuentoOrden.js";
+import descuentoAdicionalCat from "./descuentoAdicionalCat.js";
+import imprimirDescAdicCat from "./imprimirDescAdicCat.js";
 
 
 const price = document.querySelector("#precio");
@@ -29,7 +31,8 @@ form.addEventListener("submit", (event) => {
   "Precio producto: "+ pNumber + "<br>" +
   "Cantidad producto: "+ cNumber + "<br>" +
   "Impuesto para el estado " + selectedValue + "(" + codimpuesto(selectedValue) + "%)  + impuesto para " + ValueCat + "(" + catimpuesto(ValueCat) + "%): "+ impuesto(pNumber,cNumber,selectedValue,ValueCat) + "<br>" +
-  "Descuento por cantidad de " + cNumber + " unidades es de: " + imprimirDescuentoOrden(cNumber) + " del precio total " + "<br>" + 
+  "Descuento por cantidad de " + cNumber + " unidades es de: " + imprimirDescuentoOrden(cNumber) + " del precio total " + 
+  "+ descuento adicional por categoria " + ValueCat + "(" + imprimirDescAdicCat(ValueCat) + "):" + "<br>" + 
   "Precio neto: " + totalizador(pNumber,cNumber,selectedValue,ValueCat) + 
   "</p>";
 });
