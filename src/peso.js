@@ -10,7 +10,13 @@ function envio(peso,cantidad) {
         return cantidad * costoenvio
         } else 
         {    
-            return 0
+         if (peso >=41 && peso<=80) {
+            const costoenvio = 6;
+            return cantidad * costoenvio
+            } else 
+            {
+             return 0
+            }
         }
     }
 
