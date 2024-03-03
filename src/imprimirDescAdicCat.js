@@ -14,6 +14,9 @@ function imprimirDescAdicCat(categoria){
     else if(categoria === "Electronicos"){
         return "1%";
     }
+    else if(categoria === "Vestimenta"){
+        return "0%";
+    }
     else{
         return "0%";
     }

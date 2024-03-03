@@ -80,5 +80,9 @@ describe("Totalizador", () => {
   it("Deberia devolver el precio neto con el descuento adicional por categoria Electronicos (1%)", () =>{
     expect(totalizador(3, 30000, "NV","Electronicos")).toEqual(86400);
   });
+
+  it("Deberia devolver el precio neto con el descuento adicional por categoria Vestimenta (0%)", () =>{
+    expect(totalizador(5, 10000, "AL","Vestimenta")).toEqual(48000);
+  });
 });
 
