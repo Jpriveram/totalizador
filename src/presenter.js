@@ -1,6 +1,7 @@
 import totalizador from "./totalizador.js";
 import codimpuesto from "./codImpuesto.js";
 import impuesto from "./impuesto.js";
+import imprimirDescuentoOrden from "./imprimirDescuentoOrden.js";
 
 
 const price = document.querySelector("#precio");
@@ -24,6 +25,7 @@ form.addEventListener("submit", (event) => {
   "Precio producto: "+ pNumber + "<br>" +
   "Cantidad producto: "+ cNumber + "<br>" +
   "Impuesto para " + selectedValue+ codimpuesto(selectedValue) + impuesto(pNumber,cNumber,selectedValue) + "<br>" +
+  "Descuento por cantidad de " + cNumber + " unidades es de: " + imprimirDescuentoOrden(cNumber) + " del precio total " + "<br>" + 
   "Precio neto: " + totalizador(pNumber,cNumber,selectedValue) + 
   "</p>";
 });
