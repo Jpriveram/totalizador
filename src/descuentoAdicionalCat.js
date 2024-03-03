@@ -1,4 +1,10 @@
 function descuentoAdicionalCat(categoria, precioNeto){
-    return categoria;
+    if(categoria === "Alimentos"){
+        return precioNeto * 0.02;
+    }
+    else if(categoria === "Varios"){
+        return 0;
+    }
+    return 0;
 }
 export default descuentoAdicionalCat;
