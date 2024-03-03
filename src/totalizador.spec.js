@@ -40,5 +40,9 @@ describe("Totalizador", () => {
     expect(totalizador(4, 30000, "AL")).toEqual(106800);
   });
 
+  it("Deberia mostrar el precio neto con el impuesto para la categoria default (Varios)", () =>{
+    expect(totalizador(1, 100, "AL")).toEqual(104);
+  });
+
   // COmmit
 });
