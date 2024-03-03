@@ -3,13 +3,13 @@ import descuentoPorOrden from "./descuentoPorOrden.js";
 
 function totalizador(precio, cantidad, eCodigo){
     let precioNeto = precio * cantidad;
-    console.log("precio neto " + precioNeto);
+    //console.log("precio neto " + precioNeto);
     let imp = impuesto( precio, cantidad, eCodigo);
-    console.log("Impuesto Estado " + imp);
+    //console.log("Impuesto Estado " + imp);
     let descuentoOrden = descuentoPorOrden(cantidad, precioNeto);
-    console.log("Descuento Orden " + descuentoOrden);
+    //console.log("Descuento Orden " + descuentoOrden);
     let salida = imp + precioNeto - descuentoOrden
-    console.log("Salida " + salida)
+    //console.log("Salida " + salida)
     return salida;    
 }
 
