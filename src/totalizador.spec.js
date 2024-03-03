@@ -39,4 +39,6 @@ describe("Totalizador", () => {
   it("Deberia mostrar el monto total con el descuento del 15% para una cantidad de 30000", () =>{
     expect(totalizador(4, 30000, "AL")).toEqual(106800);
   });
+
+  // COmmit
 });
