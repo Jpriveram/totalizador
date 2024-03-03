@@ -11,6 +11,9 @@ function imprimirDescAdicCat(categoria){
     else if(categoria === "Muebles"){
         return "0%";
     }
+    else if(categoria === "Electronicos"){
+        return "1%";
+    }
     else{
         return "0%";
     }

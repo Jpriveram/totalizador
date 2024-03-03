@@ -11,6 +11,9 @@ function descuentoAdicionalCat(categoria, precioNeto){
     else if(categoria === "Muebles"){
         return 0;
     }
+    else if(categoria === "Electronicos"){
+        return precioNeto * 0.01;
+    }
     else if(categoria === "Varios"){
         return 0;
     }

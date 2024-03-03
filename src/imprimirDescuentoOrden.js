@@ -15,7 +15,7 @@ function imprimirDescuentoOrden(cantidadOrden){
         return "15%"
     }
     else{
-        return "0%"
+        return "0%";
     }
 }
 

@@ -53,7 +53,7 @@ describe("Totalizador", () => {
   });
 
   it("Deberia mostrar el precio neto con el impuesto por categoria(Electronicos)", () =>{
-    expect(totalizador(1, 100, "AL","Electronicos")).toEqual(108);
+    expect(totalizador(1, 100, "AL","Electronicos")).toEqual(107);
   });
 
   it("Deberia mostrar el precio neto con el impuesto por categoria(Vestimenta)", () =>{
@@ -75,6 +75,10 @@ describe("Totalizador", () => {
 
   it("Deberia devolver el precio neto con el descuento adicional por categoria Muebles (0%)", () =>{
     expect(totalizador(70, 20, "CA","Muebles")).toEqual(1557.5);
+  });
+
+  it("Deberia devolver el precio neto con el descuento adicional por categoria Electronicos (1%)", () =>{
+    expect(totalizador(3, 30000, "NV","Electronicos")).toEqual(86400);
   });
 });
 
