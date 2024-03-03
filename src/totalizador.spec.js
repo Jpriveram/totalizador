@@ -55,5 +55,9 @@ describe("Totalizador", () => {
   it("Deberia mostrar el precio neto con el impuesto por categoria(Electronicos)", () =>{
     expect(totalizador(1, 100, "AL","Electronicos")).toEqual(108);
   });
+
+  it("Deberia mostrar el precio neto con el impuesto por categoria(Vestimenta)", () =>{
+    expect(totalizador(1, 100, "AL","Vestimenta")).toEqual(106);
+  });
   
 });

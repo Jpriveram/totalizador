@@ -24,9 +24,17 @@ function impuesto(precio,cantidad,codigo,categoria) {
                 
             } else 
             {
-                let precioNeto = precio * cantidad;
-                let tax = (codimpuesto(codigo)  / 100)* precioNeto;
-                return tax ;
+                if (categoria === "Vestimenta") {
+                    let precioNeto = precio * cantidad;
+                    let tax = ((codimpuesto(codigo) + catimpuesto(categoria)) / 100)* precioNeto;
+                    return tax ;
+                    
+                } else 
+                {
+                    let precioNeto = precio * cantidad;
+                    let tax = (codimpuesto(codigo)  / 100)* precioNeto;
+                    return tax ;
+                }
             }
         }
     }

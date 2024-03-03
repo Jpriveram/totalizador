@@ -11,7 +11,12 @@ function catimpuesto (categoria){
                 return 4.00
             } else 
             {
-                return 0.00
+                if (categoria === "Vestimenta") {
+                    return 2.00
+                } else 
+                {
+                    return 0.00
+                }
             }
         }
     }
