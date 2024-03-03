@@ -1,9 +1,12 @@
-function descuentoPorOrden(cantOrden){
+function descuentoPorOrden(cantOrden, precioNeto){
     if(cantOrden === 1000){
-        return cantOrden * 0.03;
+        return precioNeto * 0.03;
     }
     else if(cantOrden === 3000){
-        return cantOrden * 0.05;
+        return precioNeto * 0.05;
+    }
+    else if(cantOrden === 7000){
+        return precioNeto * 0.07;
     }
     return 0;
 }

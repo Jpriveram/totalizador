@@ -6,7 +6,7 @@ function totalizador(precio, cantidad, eCodigo){
     console.log("precio neto " + precioNeto);
     let imp = impuesto( precio, cantidad, eCodigo);
     console.log("Impuesto Estado " + imp);
-    let descuentoOrden = descuentoPorOrden(cantidad);
+    let descuentoOrden = descuentoPorOrden(cantidad, precioNeto);
     console.log("Descuento Orden " + descuentoOrden);
     let salida = imp + precioNeto - descuentoOrden
     console.log("Salida " + salida)
