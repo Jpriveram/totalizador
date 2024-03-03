@@ -64,5 +64,9 @@ describe("Totalizador", () => {
   it("Deberia devolver el precio neto con el descuento adicional por categoria ALIMENTOS (2%)", () =>{
     expect(totalizador(1, 100, "AL","Alimentos")).toEqual(102);
   });
+
+  it("Deberia devolver el precio neto con el descuento adicional por categoria Bebidas Alcoholicas", () =>{
+    expect(totalizador(2, 1000, "UT","Bebidas alcholicas")).toEqual(2213);
+  });
 });
 
