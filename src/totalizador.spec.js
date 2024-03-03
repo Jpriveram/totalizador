@@ -47,5 +47,9 @@ describe("Totalizador", () => {
   it("Deberia mostrar el precio neto con el impuesto por categoria(Bebidas alcholicas)", () =>{
     expect(totalizador(1, 100, "AL","Bebidas alcholicas")).toEqual(111);
   });
+
+  it("Deberia mostrar el precio neto con el impuesto por categoria(Muebles)", () =>{
+    expect(totalizador(1, 100, "AL","Muebles")).toEqual(108);
+  });
   // COmmit
 });
