@@ -84,5 +84,12 @@ describe("Totalizador", () => {
   it("Deberia devolver el precio neto con el descuento adicional por categoria Vestimenta (0%)", () =>{
     expect(totalizador(5, 10000, "AL","Vestimenta")).toEqual(48000);
   });
+
+  it("Deberia mostrar el precio neto mas el precio de envio por peso del 0-10", () =>{
+    expect(totalizador(1, 100, "AL","Vestimenta",1)).toEqual(106);
+  });
+
+
+
 });
 
