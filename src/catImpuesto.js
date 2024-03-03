@@ -4,10 +4,15 @@ function catimpuesto (categoria){
     } else 
     {
         if (categoria === "Muebles") {
-            return 4.00
+            return 3.00
         } else 
         {
-            return 0.00
+            if (categoria === "Electronicos") {
+                return 4.00
+            } else 
+            {
+                return 0.00
+            }
         }
     }
 }
