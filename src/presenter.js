@@ -28,7 +28,7 @@ form.addEventListener("submit", (event) => {
   div.innerHTML = "<p>" + 
   "Precio producto: "+ pNumber + "<br>" +
   "Cantidad producto: "+ cNumber + "<br>" +
-  "Impuesto para " + selectedValue + "(" + codimpuesto(selectedValue) + ") + impuesto por categoria" + "(" + catimpuesto(ValueCat) + "): "+ impuesto(pNumber,cNumber,selectedValue,ValueCat) + "<br>" +
+  "Impuesto para el estado " + selectedValue + "(" + codimpuesto(selectedValue) + "%)  + impuesto para " + ValueCat + "(" + catimpuesto(ValueCat) + "%): "+ impuesto(pNumber,cNumber,selectedValue,ValueCat) + "<br>" +
   "Descuento por cantidad de " + cNumber + " unidades es de: " + imprimirDescuentoOrden(cNumber) + " del precio total " + "<br>" + 
   "Precio neto: " + totalizador(pNumber,cNumber,selectedValue,ValueCat) + 
   "</p>";
