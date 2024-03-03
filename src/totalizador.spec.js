@@ -41,8 +41,11 @@ describe("Totalizador", () => {
   });
 
   it("Deberia mostrar el precio neto con el impuesto para la categoria default (Varios)", () =>{
-    expect(totalizador(1, 100, "AL")).toEqual(104);
+    expect(totalizador(1, 100, "AL","Varios")).toEqual(104);
   });
 
+  it("Deberia mostrar el precio neto con el impuesto por categoria(Bebidas alcholicas)", () =>{
+    expect(totalizador(1, 100, "AL","Bebidas alcholicas")).toEqual(111);
+  });
   // COmmit
 });
