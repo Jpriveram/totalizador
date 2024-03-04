@@ -16,6 +16,7 @@ const form = document.querySelector("#total-form");
 const div = document.querySelector("#resultado-div");
 const selCod = document.querySelector("#selectCodigo");
 const selCat = document.querySelector("#selectCategoria");
+const cliente = document.querySelector("#selectCliente");
 
 
 form.addEventListener("submit", (event) => {
@@ -28,6 +29,7 @@ form.addEventListener("submit", (event) => {
   const wnumber = Number.parseInt(delivery.value)
   const selectedValue = selCod.value;
   const ValueCat = selCat.value;
+  const valueCliente = cliente.value;
 
 
   div.innerHTML = "<p>" + 
@@ -37,6 +39,7 @@ form.addEventListener("submit", (event) => {
   "Descuento por cantidad de " + cNumber + " unidades es de: " + imprimirDescuentoOrden(cNumber) + " del precio total " + 
   "+ descuento adicional por categoria " + ValueCat + "(" + imprimirDescAdicCat(ValueCat) + "):" + descuento(pNumber, cNumber, ValueCat) + "<br>" + 
   "Precio de envio: " + envio(wnumber,cNumber) + "$" + "<br>" +
+  "Tipo de cliente: " + valueCliente + "<br>" + 
   "Precio neto: " + totalizador(pNumber,cNumber,selectedValue,ValueCat,wnumber) + 
   "</p>";
 });
