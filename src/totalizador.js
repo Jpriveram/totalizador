@@ -23,6 +23,13 @@ function totalizador(precio, cantidad, eCodigo, categoria,peso, tipoCliente){
     if(tipoCliente === "Recurrente" && precioNeto > 3000 && categoria === "Alimentos"){
         salida = salida - 100;
     }
+    else 
+    {
+    if(tipoCliente === "Especial" && precioNeto > 7000 && categoria === "Electronicos"){
+        salida = salida - 200;
+    }
+    }
+    
 
     return salida;    
 }

@@ -142,6 +142,11 @@ describe("Totalizador", () => {
     expect(totalizador(4, 1000, "TX", "Alimentos", 50, "Recurrente")).toEqual(9920);
   });
 
+  //Recurrente		Mayor a 3000			Alimentos			$ 100
+  it("Deberia mostrar el descuento de envio por tipo de cliente categoria y precio neto especificos", () =>{
+    expect(totalizador(1, 7001, "TX", "Electronicos", 1, "Especial")).toEqual(6958.5225);
+  });
+
 
 });
 
