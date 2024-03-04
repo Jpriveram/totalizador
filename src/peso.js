@@ -26,7 +26,13 @@ function envio(peso,cantidad) {
                         
                     } else 
                     {
-                        return 0
+                    if (peso >200) {
+                        const costoenvio = 9;
+                        return cantidad * costoenvio
+                        } else 
+                        {
+                            return 0
+                        }
                     }
                 }
             }
