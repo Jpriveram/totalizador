@@ -105,5 +105,9 @@ describe("Totalizador", () => {
     expect(totalizador(1, 100, "AL","Vestimenta",90)).toEqual(756);
   });
 
+  it("Deberia mostrar el precio neto mas el precio de envio por peso del 101-200", () =>{
+    expect(totalizador(1, 100, "AL","Vestimenta",200)).toEqual(906);
+  });
+  
 });
 
