@@ -117,5 +117,6 @@ describe("Totalizador", () => {
   it("Deberia mostrar el descuento de envio por tipo de cliente Normal", () =>{
     expect(totalizador(1, 100, "AL", "Vestimenta", 300, "Normal")).toEqual(1006);
   });
+
 });
 
