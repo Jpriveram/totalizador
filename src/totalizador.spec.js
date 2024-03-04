@@ -133,5 +133,15 @@ describe("Totalizador", () => {
   it("Deberia mostrar el descuento de envio por tipo de cliente Especial", () =>{
     expect(totalizador(5, 15000, "TX", "Muebles", 50, "Especial")).toEqual(163087.5);
   });
+
+
+  // BENEFICIO POR PRECIO NETO, CATEGORIA Y TIPO DE PRODUCTO QUE COMPREN
+
+  //Recurrente		Mayor a 3000			Alimentos			$ 100
+  it("Deberia mostrar el descuento de envio por tipo de cliente Especial", () =>{
+    expect(totalizador(4, 1000, "TX", "Alimentos", 50, "Recurrente")).toEqual(9920);
+  });
+
+
 });
 
