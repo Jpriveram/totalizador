@@ -114,9 +114,14 @@ describe("Totalizador", () => {
   });
 
   // Descuento en costo de envio por tipo de cliente
+  // Cliente Normal
   it("Deberia mostrar el descuento de envio por tipo de cliente Normal", () =>{
     expect(totalizador(1, 100, "AL", "Vestimenta", 300, "Normal")).toEqual(1006);
   });
 
+  // Cliente Recurrente
+  it("Deberia mostrar el descuento de envio por tipo de cliente Recurrente", () =>{
+    expect(totalizador(100, 1000, "NV", "Electronicos", 200, "Recurrente")).toEqual(115960);
+  });
 });
 
