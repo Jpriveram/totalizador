@@ -123,5 +123,10 @@ describe("Totalizador", () => {
   it("Deberia mostrar el descuento de envio por tipo de cliente Recurrente", () =>{
     expect(totalizador(100, 1000, "NV", "Electronicos", 200, "Recurrente")).toEqual(115960);
   });
+
+  // Cliente Antiguo Recurrente
+  it("Deberia mostrar el descuento de envio por tipo de cliente Antiguo recurrente", () =>{
+    expect(totalizador(5, 15000, "TX", "Muebles", 50, "Antiguo recurrente")).toEqual(163537.5);
+  });
 });
 

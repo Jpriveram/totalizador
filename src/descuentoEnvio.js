@@ -5,6 +5,9 @@ function descuentoEnvio(tipoCliente, precioEnvio){
     else if(tipoCliente === "Recurrente"){
         return precioEnvio * 0.005;
     }
+    else if(tipoCliente === "Antiguo recurrente"){
+        return precioEnvio * 0.01;
+    }
     else{
         return 0;
     }
