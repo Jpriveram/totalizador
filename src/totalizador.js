@@ -3,6 +3,7 @@ import descuentoPorOrden from "./descuentoPorOrden.js";
 import descuentoAdicionalCat from "./descuentoAdicionalCat.js";
 import envio from "./peso.js";
 import descuentoEnvio from "./descuentoEnvio.js";
+import descuentosEspeciales from "./descuentosEspeciales.js";
 
 function totalizador(precio, cantidad, eCodigo, categoria,peso, tipoCliente){
     let precioNeto = precio * cantidad;
@@ -17,20 +18,8 @@ function totalizador(precio, cantidad, eCodigo, categoria,peso, tipoCliente){
     //console.log("Precio de envio: " + precioEnvio);
     let descuentoEnv = descuentoEnvio(tipoCliente, precioEnvio);
     //console.log("Descuento Env: " + descuentoEnv);
-    let salida = imp + precioNeto - descuentoOrden - descuentoAdicionalCategoria + precioEnvio - descuentoEnv;
+    let salida = imp + precioNeto - descuentoOrden - descuentoAdicionalCategoria + precioEnvio - descuentoEnv - descuentosEspeciales(tipoCliente, categoria, precioNeto);
     //console.log("Salida: " + salida)
-    
-    if(tipoCliente === "Recurrente" && precioNeto > 3000 && categoria === "Alimentos"){
-        salida = salida - 100;
-    }
-    else 
-    {
-    if(tipoCliente === "Especial" && precioNeto > 7000 && categoria === "Electronicos"){
-        salida = salida - 200;
-    }
-    }
-    
-
     return salida;    
 }
 

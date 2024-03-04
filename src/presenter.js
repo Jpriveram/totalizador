@@ -9,7 +9,7 @@ import descuento from "./descuento.js";
 import envio from "./peso.js";
 import imprimirDescuentoPorTipoCliente from "./imprimirDescTipoCliente.js";
 import descuentoEnvio from "./descuentoEnvio.js";
-
+import descuentosEspeciales from "./descuentosEspeciales.js";
 
 const price = document.querySelector("#precio");
 const amount = document.querySelector("#cantidad");
@@ -44,6 +44,7 @@ form.addEventListener("submit", (event) => {
   "Precio de envio: " + envio(wnumber,cNumber) + "$" + "<br>" +
   "Tipo de cliente: " + valueCliente + "<br>" + 
   "Descuento en envio por ser cliente " + valueCliente + " es del " + imprimirDescuentoPorTipoCliente(valueCliente) + " del costo del envio: " + descuentoEnvio(valueCliente, envio(wnumber,cNumber)) + "<br>" +
+  "Descuento especial: " + descuentosEspeciales(valueCliente, ValueCat, (pNumber * cNumber)) + "<br>" +
   "Precio neto: " + totalizador(pNumber,cNumber,selectedValue,ValueCat,wnumber, valueCliente) + 
   "</p>";
 });
