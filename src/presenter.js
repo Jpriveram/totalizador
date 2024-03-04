@@ -43,6 +43,6 @@ form.addEventListener("submit", (event) => {
   "Precio de envio: " + envio(wnumber,cNumber) + "$" + "<br>" +
   "Tipo de cliente: " + valueCliente + "<br>" + 
   "Descuento en envio por ser cliente " + valueCliente + " es del " + imprimirDescuentoPorTipoCliente(valueCliente) + " del costo del envio: " + descuentoEnvio(valueCliente, envio(wnumber,cNumber)) + "<br>" +
-  "Precio neto: " + totalizador(pNumber,cNumber,selectedValue,ValueCat,wnumber) + 
+  "Precio neto: " + totalizador(pNumber,cNumber,selectedValue,ValueCat,wnumber, valueCliente) + 
   "</p>";
 });
