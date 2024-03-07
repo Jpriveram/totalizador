@@ -1,0 +1,53 @@
+usuario ingrese cantidad de items al y presionar el boton se muestra
+usuario ingrese precio por item al y presionar el boton se muestra
+usuario ingrese ambos campos y al presionar el boton muestra el precio neto
+
+ funcionalidad que al codigo CA se le agrega un impuesto al precio neto y se muestra la cantidad del impuesto
+ funcionalidad que al codigo UT se le agrega un impuesto al precio neto y se muestra la cantidad del impuesto 
+ funcionalidad que al codigo NV se le agrega un impuesto al precio neto y se muestra la cantidad del impuesto
+ funcionalidad que al codigo TX se le agrega un impuesto al precio neto y se muestra la cantidad del impuesto
+ funcionalidad que al codigo AL se le agrega un impuesto al precio neto y se muestra la cantidad del impuesto
+ funcionalidad que nos muestra el monto total con el impuesto 
+
+ funcionalidad que si el total de la orden es de 1000 se le descuenta 3% del precio neto y se muestra la cantdiad descontada
+ funcionalidad que si el total de la orden es de 3000 se le descuenta 5% del precio neto y se muestra la cantdiad descontada
+ funcionalidad que si el total de la orden es de 7000 se le descuenta 7% del precio neto y se muestra la cantdiad descontada
+ funcionalidad que si el total de la orden es de 10000 se le descuenta 10% del precio neto y se muestra la cantdiad descontada
+ funcionalidad que nos muestra el monto total con el descuento aplicado
+ funcionalidad que si el total de la orden es de 30000 se le descuenta 15% del precio neto y se muestra la cantdiad descontada
+
+ funcionalidad que nos muestra el monto total con el descuento y el impuesto aplicado 
+
+ la UI para el codigo de impuesto con el default CA
+
+la UI para las categorias con varios siendo el default
+Cuando el usuario elija Bebidas alcholicas se agrega 7% al impuesto 
+Cuando el usuario elija Muebles se agrega 3% al impuesto 
+Cuando el usuario elija Electronicos se agrega 4% al impuesto 
+Cuando el usuario elija Vestimenta se agrega 2$ al impuesto 
+se mostrara el impuesto de categoria y de codigo a adicionar
+Cuando el usuario elija Alimentos se descuenta 2% adicional al precio neto
+Cuando el usuario elija matrial escritorio se agrega 3% adicional al precio neto 
+Cuando el usuario elija Electornicos se agrega 4% adicional al precio neto
+se mostrara el descuento de categoria y el descuento pro cantidad a descontar
+
+agrega UI para que el usario ingrese un presionar
+agregamos la funcionalidad de que si elije un peso de 11-20 el costo de envio es de 3.5 por unidad
+agregamos la funcionalidad de que si elije un peso de 21-40 el costo de envio es de 5 por unidad
+agregamos la funcionalidad de que si elije un peso de 41-80 el costo de envio es de 6 por unidad
+agregamos la funcionalidad de que si elije un peso de 81-100 el costo de envio es de 6.5 por unidad
+agregamos la funcionalidad de que si elije un peso de 101-200 el costo de envio es de 8 por unidad
+agregamos la funcionalidad de que si elije un mayor a 200 el costo de envio es de 9 por unidad
+se mostrar el costo de envio 
+
+agrega el UI para elegir el cliente con Normal siendo el default
+agregamos funcionalidad de que si elije Recurrente como tipo de cliente se descuenta 0,5 al costo de envio
+agregamos funcionalidad de que si elije Antiguo Recurrente como tipo de cliente se descuenta 1 al costo de envio
+agregamos funcionalidad de que si elije Especial como tipo de cliente se descuenta 1,5 al costo de envio
+se mostrara el descuento aplicado al precio de envio 
+
+caso especial donde el usuario elije Recurrente, tiene un precio neto mayor a 3000 y ademas elije Alimentos se le descontara 100 al precio neto
+caso especial donde el usuario elije Especial, tiene un precio neto mayor a 7000 y ademas elije Electronicos se le descontara 200 al precio neto
+se mostrara el monto en caso de que se elijan los datos necesarios para el descuento
+
+agregaremos restricciones para evitar datos vacios y numeros negativos en el formulario y saltar una alerta si se infringen
